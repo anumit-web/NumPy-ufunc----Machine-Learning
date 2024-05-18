@@ -1,7 +1,7 @@
 #   python3 pandas_Read_CSV.py
 """
 
-python3 NumPy_ufuncs_NumPy_Hyperbolic_Functions.py
+python3 NumPy_ufuncs_NumPy_Set_Operations.py
 
 """
 
@@ -10,55 +10,48 @@ import numpy as np
 
 print("************************************")
 
-x = np.sinh(np.pi/2)
+arr = np.array([1, 1, 1, 2, 3, 4, 5, 5, 6, 7])
+
+x = np.unique(arr)
 
 print(x)
 
 print("---------------------------------------------------")
 
-arr = np.array([np.pi/2, np.pi/3, np.pi/4, np.pi/5])
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
 
-x = np.cosh(arr)
+newarr = np.union1d(arr1, arr2)
 
-print(x)
+print(newarr)
+
+print("---------------------------------------------------")
+
+arr1 = np.array([1, 2, 3, 4])
+arr2 = np.array([3, 4, 5, 6])
+
+newarr = np.intersect1d(arr1, arr2, assume_unique=True)
+
+print(newarr)
+
+print("---------------------------------------------------")
+
+set1 = np.array([1, 2, 3, 4])
+set2 = np.array([3, 4, 5, 6])
+
+newarr = np.setdiff1d(set1, set2, assume_unique=True)
+
+print(newarr)
 
 
 print("---------------------------------------------------")
 
-x = np.arcsinh(1.0)
+set1 = np.array([1, 2, 3, 4])
+set2 = np.array([3, 4, 5, 6])
 
-print(x)
+newarr = np.setxor1d(set1, set2, assume_unique=True)
 
-print("---------------------------------------------------")
-
-arr = np.array([0.1, 0.2, 0.5])
-
-x = np.arctanh(arr)
-
-print(x)
-
-print("---------------------------------------------------")
-
-arr = np.array([np.pi/2, np.pi/3, np.pi/4, np.pi/5])
-
-x = np.cosh(arr)
-
-print(x)
-
-
-print("---------------------------------------------------")
-
-arr = np.array([0.1, 0.2, 0.5])
-
-x = np.arctanh(arr)
-
-print(x)
-
-print("---------------------------------------------------")
-
-
-print("---------------------------------------------------")
-
+print(newarr)
 
 print("---------------------------------------------------")
 
